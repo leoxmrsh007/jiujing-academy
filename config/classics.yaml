@@ -1,0 +1,156 @@
+# 九经书院 - 经典配置
+# 九经列表与元数据
+
+classics:
+  - id: zhouyi
+    name: 周易
+    name_en: I Ching / Book of Changes
+    category: 易学
+    era: 先秦
+    author: 伏羲/文王/孔子
+    core_concepts: [阴阳, 八卦, 六十四卦, 变易, 简易, 不易]
+    versions:
+      - 原文（繁体）
+      - 王弼注
+      - 程颐传
+      - 来知德注
+      - 英译: Wilhelm/Baynes
+    status: pending
+    
+  - id: daodejing
+    name: 道德经
+    name_en: Tao Te Ching
+    category: 道家
+    era: 春秋
+    author: 老子
+    core_concepts: [道, 德, 无为, 自然, 柔弱胜刚强]
+    versions:
+      - 原文（河上公本）
+      - 王弼注
+      - 英译: Lau/Waley
+    status: imported  # 81章已导入
+    
+  - id: zhuangzi
+    name: 庄子
+    name_en: Zhuangzi
+    category: 道家
+    era: 战国
+    author: 庄子
+    core_concepts: [逍遥, 齐物, 坐忘, 心斋, 无用之用]
+    versions:
+      - 原文（郭象注）
+      - 英译: Watson/Graham
+    status: imported  # 30篇已导入
+    
+  - id: lunyu
+    name: 论语
+    name_en: Analects
+    category: 儒家
+    era: 春秋
+    author: 孔子弟子及再传弟子
+    core_concepts: [仁, 义, 礼, 智, 信, 孝, 忠恕]
+    versions:
+      - 原文（何晏集解）
+      - 朱熹集注
+      - 刘宝楠正义
+      - 英译: Legge/Lau
+    status: imported  # 50篇已导入
+    
+  - id: mengzi
+    name: 孟子
+    name_en: Mencius
+    category: 儒家
+    era: 战国
+    author: 孟子及弟子
+    core_concepts: [性善, 仁政, 王道, 民本, 养气]
+    versions:
+      - 原文（赵岐注）
+      - 朱熹集注
+      - 焦循正义
+      - 英译: Lau/Bloom
+    status: pending
+    
+  - id: daxue
+    name: 大学
+    name_en: Great Learning
+    category: 儒家
+    era: 先秦
+    author: 曾子
+    core_concepts: [三纲, 八目, 明明德, 亲民, 止于至善]
+    versions:
+      - 原文（郑玄注）
+      - 朱熹章句
+      - 英译: Legge
+    status: pending
+    
+  - id: zhongyong
+    name: 中庸
+    name_en: Doctrine of the Mean
+    category: 儒家
+    era: 先秦
+    author: 子思
+    core_concepts: [诚, 中, 和, 天命, 率性]
+    versions:
+      - 原文（郑玄注）
+      - 朱熹章句
+      - 英译: Legge
+    status: pending
+    
+  - id: huangdineijing
+    name: 黄帝内经
+    name_en: Yellow Emperor's Inner Canon
+    category: 医家
+    era: 先秦-汉
+    author: 托名黄帝
+    core_concepts: [阴阳五行, 藏象, 经络, 养生, 治未病]
+    versions:
+      - 素问
+      - 灵枢
+      - 白话译本
+      - 英译: Ni/Unschuld
+    status: pending
+    
+  - id: liuzutanjing
+    name: 六祖坛经
+    name_en: Platform Sutra of the Sixth Patriarch
+    category: 禅宗
+    era: 唐代
+    author: 惠能
+    core_concepts: [顿悟, 自性, 无念, 见性成佛, 定慧一体]
+    versions:
+      - 宗宝本
+      - 敦煌本
+      - 英译: Wong
+      - 日译本
+    status: pending
+
+# 课程模块
+course_modules:
+  - id: reading
+    name: 原文精读
+    description: 逐章逐句研读经典原文
+    
+  - id: commentary
+    name: 注疏研讨
+    description: 历代重要注本对比研究
+    
+  - id: philosophy
+    name: 思想阐释
+    description: 深入理解经典的核心思想
+    
+  - id: comparison
+    name: 中外对比
+    description: 与西方哲学、其他传统的对话
+    
+  - id: practice
+    name: 现代应用
+    description: 经典智慧在现代生活中的应用
+
+# 研究工具
+tools:
+  - text_comparison    # 文本对照
+  - concept_map        # 概念图谱
+  - semantic_search    # 语义搜索
+  - ai_dialogue        # AI对话
+  - study_log          # 学习日志
+  - cross_reference    # 交叉引用
