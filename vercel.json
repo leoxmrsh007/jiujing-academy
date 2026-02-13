@@ -2,14 +2,40 @@
   "version": 2,
   "builds": [
     {
-      "src": "frontend/index.html",
+      "src": "frontend/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/classics/(.*)",
+      "dest": "/frontend/classics/$1"
+    },
+    {
+      "src": "/courses/(.*)",
+      "dest": "/frontend/courses/$1"
+    },
+    {
+      "src": "/research/(.*)",
+      "dest": "/frontend/research/$1"
+    },
+    {
+      "src": "/profile/(.*)",
+      "dest": "/frontend/profile/$1"
+    },
+    {
+      "src": "/(.+\\.(html|css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
+      "dest": "/frontend/$1"
+    },
+    {
+      "src": "/",
       "dest": "/frontend/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/$1"
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
