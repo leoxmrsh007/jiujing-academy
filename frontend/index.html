@@ -26,6 +26,32 @@
         header h1 { font-size: 3em; margin-bottom: 10px; }
         header p { font-size: 1.2em; opacity: 0.9; }
         
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        nav a {
+            color: #8b4513;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            background: #f0e6d3;
+        }
+        
         /* Stats */
         .stats {
             display: grid;
@@ -40,36 +66,42 @@
             text-align: center;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             border-top: 4px solid #8b4513;
+            transition: transform 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
         }
         .stat-card h3 { font-size: 2.5em; color: #8b4513; margin-bottom: 10px; }
         .stat-card p { color: #666; }
         
-        /* Classics Grid */
-        .classics-section { margin-bottom: 40px; }
+        /* Section Titles */
         .section-title {
             font-size: 2em;
             color: #8b4513;
-            margin-bottom: 30px;
+            margin: 50px 0 30px;
             text-align: center;
             border-bottom: 2px solid #d4c4b0;
             padding-bottom: 15px;
         }
+        
+        /* Classics Grid */
         .classics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
+            margin-bottom: 40px;
         }
         .classic-card {
             background: white;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
             border-left: 5px solid #8b4513;
         }
         .classic-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
         .classic-card h3 {
             color: #8b4513;
@@ -90,6 +122,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            margin-bottom: 15px;
         }
         .classic-card .concept-tag {
             padding: 3px 10px;
@@ -97,6 +130,52 @@
             border-radius: 15px;
             font-size: 0.85em;
             color: #5d4e37;
+        }
+        .classic-card .resources {
+            font-size: 0.9em;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        
+        /* Courses */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        .course-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .course-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        .course-card h3 {
+            color: #8b4513;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        .course-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .course-meta span {
+            background: #f5f0e8;
+            padding: 5px 12px;
+            border-radius: 15px;
         }
         
         /* Features */
@@ -112,6 +191,10 @@
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
         }
         .feature-card .icon {
             font-size: 3em;
@@ -129,13 +212,14 @@
             background: #3d3d3d;
             color: #f5f0e8;
             border-radius: 30px 30px 0 0;
+            margin-top: 60px;
         }
         footer p { opacity: 0.8; }
         
         /* Responsive */
         @media (max-width: 768px) {
             header h1 { font-size: 2em; }
-            .classics-grid { grid-template-columns: 1fr; }
+            .classics-grid, .courses-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -147,139 +231,234 @@
     </header>
     
     <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#classics">经典</a></li>
+                <li><a href="#courses">课程</a></li>
+                <li><a href="#concepts">概念</a></li>
+                <li><a href="#resources">资源</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+        </nav>
+        
         <!-- Stats -->
         <div class="stats">
             <div class="stat-card">
-                <h3>10</h3>
+                <h3>11</h3>
                 <p>核心经典</p>
             </div>
             <div class="stat-card">
-                <h3>30</h3>
-                <p>核心概念</p>
+                <h3>54</h3>
+                <p>哲学概念</p>
             </div>
             <div class="stat-card">
                 <h3>12</h3>
                 <p>历代圣贤</p>
             </div>
             <div class="stat-card">
-                <h3>165</h3>
-                <p>经典篇章</p>
+                <h3>6</h3>
+                <p>精品课程</p>
             </div>
         </div>
         
-        <!-- Classics -->
-        <div class="classics-section">
-            <h2 class="section-title">九经 + 佛家二经</h2>
-            <div class="classics-grid">
-                <div class="classic-card">
-                    <h3>📖 周易</h3>
-                    <span class="school">易学</span>
-                    <p>阴阳变化，天人合一。群经之首，大道之源。</p>
-                    <div class="concepts">
-                        <span class="concept-tag">阴阳</span>
-                        <span class="concept-tag">八卦</span>
-                    </div>
+        <!-- Classics Section -->
+        <h2 class="section-title" id="classics">📖 九经 + 佛家二经</h2>
+        <div class="classics-grid">
+            <div class="classic-card">
+                <h3>📘 道德经</h3>
+                <span class="school">道家 · 81章</span>
+                <p>道法自然，无为而治。宇宙本源，人生智慧。老子五千言，华夏第一经。</p>
+                <div class="concepts">
+                    <span class="concept-tag">道</span>
+                    <span class="concept-tag">德</span>
+                    <span class="concept-tag">无为</span>
                 </div>
-                
-                <div class="classic-card">
-                    <h3>📖 道德经</h3>
-                    <span class="school">道家</span>
-                    <p>道法自然，无为而治。宇宙本源，人生智慧。</p>
-                    <div class="concepts">
-                        <span class="concept-tag">道</span>
-                        <span class="concept-tag">德</span>
-                        <span class="concept-tag">无为</span>
-                    </div>
+                <div class="resources">✓ 原文 ✓ 河上公注 ✓ 王弼注 ✓ 现代译文 ✓ 音频</div>
+            </div>
+            
+            <div class="classic-card">
+                <h3>📗 论语</h3>
+                <span class="school">儒家 · 20篇</span>
+                <p>仁义礼智，修身治国。孔子言行，万世师表。半部论语治天下。</p>
+                <div class="concepts">
+                    <span class="concept-tag">仁</span>
+                    <span class="concept-tag">义</span>
+                    <span class="concept-tag">礼</span>
+                    <span class="concept-tag">君子</span>
                 </div>
-                
-                <div class="classic-card">
-                    <h3>📖 庄子</h3>
-                    <span class="school">道家</span>
-                    <p>逍遥齐物，精神自由。无用之用，方为大用。</p>
-                    <div class="concepts">
-                        <span class="concept-tag">逍遥</span>
-                        <span class="concept-tag">齐物</span>
-                        <span class="concept-tag">坐忘</span>
-                    </div>
+                <div class="resources">✓ 原文 ✓ 朱熹集注 ✓ 钱穆新解 ✓ 音频</div>
+            </div>
+            
+            <div class="classic-card">
+                <h3>☯️ 周易</h3>
+                <span class="school">易学 · 64卦</span>
+                <p>阴阳变化，天人合一。群经之首，大道之源。究天人之际，通古今之变。</p>
+                <div class="concepts">
+                    <span class="concept-tag">阴阳</span>
+                    <span class="concept-tag">八卦</span>
+                    <span class="concept-tag">变易</span>
                 </div>
-                
-                <div class="classic-card">
-                    <h3>📖 论语</h3>
-                    <span class="school">儒家</span>
-                    <p>仁义礼智，修身治国。孔子言行，万世师表。</p>
-                    <div class="concepts">
-                        <span class="concept-tag">仁</span>
-                        <span class="concept-tag">义</span>
-                        <span class="concept-tag">礼</span>
-                        <span class="concept-tag">智</span>
-                    </div>
+                <div class="resources">✓ 原文 ✓ 王弼注 ✓ 程颐传 ✓ 工具</div>
+            </div>
+            
+            <div class="classic-card">
+                <h3>🦋 庄子</h3>
+                <span class="school">道家 · 33篇</span>
+                <p>逍遥齐物，精神自由。无用之用，方为大用。文学的哲学，哲学的文学。</p>
+                <div class="concepts">
+                    <span class="concept-tag">逍遥</span>
+                    <span class="concept-tag">齐物</span>
+                    <span class="concept-tag">坐忘</span>
                 </div>
-                
-                <div class="classic-card">
-                    <h3>📖 孟子</h3>
-                    <span class="school">儒家</span>
-                    <p>性善论，仁政王道。民为贵，社稷次之。</p>
-                    <div class="concepts">
-                        <span class="concept-tag">性善</span>
-                        <span class="concept-tag">仁政</span>
-                    </div>
+                <div class="resources">✓ 原文 ✓ 郭象注 ✓ 成玄英疏</div>
+            </div>
+            
+            <div class="classic-card">
+                <h3>📕 孟子</h3>
+                <span class="school">儒家 · 7篇</span>
+                <p>性善论，仁政王道。民为贵，社稷次之。养浩然之气，成大人之格。</p>
+                <div class="concepts">
+                    <span class="concept-tag">性善</span>
+                    <span class="concept-tag">仁政</span>
+                    <span class="concept-tag">养气</span>
                 </div>
-                
-                <div class="classic-card">
-                    <h3>📖 大学/中庸</h3>
-                    <span class="school">儒家</span>
-                    <p>三纲八目，修齐治平。诚明之道，中和之境。</p>
-                    <div class="concepts">
-                        <span class="concept-tag">三纲</span>
-                        <span class="concept-tag">八目</span>
-                        <span class="concept-tag">诚</span>
-                    </div>
+                <div class="resources">✓ 原文 ✓ 朱熹集注 ✓ 音频</div>
+            </div>
+            
+            <div class="classic-card">
+                <h3>📙 大学/中庸</h3>
+                <span class="school">儒家 · 20章</span>
+                <p>三纲八目，修齐治平。诚明之道，中和之境。儒家入门，功夫次第。</p>
+                <div class="concepts">
+                    <span class="concept-tag">三纲八目</span>
+                    <span class="concept-tag">诚</span>
+                    <span class="concept-tag">中庸</span>
                 </div>
-                
-                <div class="classic-card">
-                    <h3>📖 黄帝内经</h3>
-                    <span class="school">医家</span>
-                    <p>阴阳五行，养生之道。治未病，天人合一。</p>
-                    <div class="concepts">
-                        <span class="concept-tag">阴阳五行</span>
-                        <span class="concept-tag">藏象</span>
-                    </div>
+                <div class="resources">✓ 原文 ✓ 朱熹章句 ✓ 音频</div>
+            </div>
+            
+            <div class="classic-card">
+                <h3>🌿 黄帝内经</h3>
+                <span class="school">医家 · 30篇</span>
+                <p>阴阳五行，养生之道。治未病，天人合一。上医治未病，中医治欲病。</p>
+                <div class="concepts">
+                    <span class="concept-tag">阴阳五行</span>
+                    <span class="concept-tag">藏象</span>
+                    <span class="concept-tag">养生</span>
                 </div>
-                
-                <div class="classic-card">
-                    <h3>📖 六祖坛经</h3>
-                    <span class="school">禅宗</span>
-                    <p>顿悟成佛，自性清净。菩提只向心觅。</p>
-                    <div class="concepts">
-                        <span class="concept-tag">顿悟</span>
-                        <span class="concept-tag">自性</span>
-                    </div>
+                <div class="resources">✓ 原文 ✓ 白话译文</div>
+            </div>
+            
+            <div class="classic-card">
+                <h3>🪷 六祖坛经</h3>
+                <span class="school">禅宗 · 20品</span>
+                <p>顿悟成佛，自性清净。菩提只向心觅。唯一中国化的佛经，禅宗根本大典。</p>
+                <div class="concepts">
+                    <span class="concept-tag">顿悟</span>
+                    <span class="concept-tag">自性</span>
+                    <span class="concept-tag">无念</span>
                 </div>
-                
-                <div class="classic-card">
-                    <h3>📖 金刚经</h3>
-                    <span class="school">般若</span>
-                    <p>缘起性空，般若智慧。应无所住而生其心。</p>
-                    <div class="concepts">
-                        <span class="concept-tag">空</span>
-                        <span class="concept-tag">般若</span>
-                        <span class="concept-tag">无我</span>
-                    </div>
+                <div class="resources">✓ 原文 ✓ 法师讲解 ✓ 音频</div>
+            </div>
+            
+            <div class="classic-card">
+                <h3>💎 金刚经</h3>
+                <span class="school">般若 · 1卷</span>
+                <p>缘起性空，般若智慧。应无所住而生其心。破相显性，直指本心。</p>
+                <div class="concepts">
+                    <span class="concept-tag">空</span>
+                    <span class="concept-tag">般若</span>
+                    <span class="concept-tag">无我</span>
                 </div>
-                
-                <div class="classic-card">
-                    <h3>📖 唯识三十颂</h3>
-                    <span class="school">唯识</span>
-                    <p>万法唯识，转识成智。三界唯心，万法唯识。</p>
-                    <div class="concepts">
-                        <span class="concept-tag">缘起</span>
-                        <span class="concept-tag">唯识</span>
-                    </div>
+                <div class="resources">✓ 原文 ✓ 六祖解义 ✓ 音频</div>
+            </div>
+            
+            <div class="classic-card">
+                <h3>🧘 唯识三十颂</h3>
+                <span class="school">唯识 · 30颂</span>
+                <p>万法唯识，转识成智。三界唯心，万法唯识。瑜伽行派精髓。</p>
+                <div class="concepts">
+                    <span class="concept-tag">八识</span>
+                    <span class="concept-tag">唯识</span>
+                    <span class="concept-tag">转识成智</span>
                 </div>
+                <div class="resources">✓ 原文 ✓ 世亲造论</div>
+            </div>
+        </div>
+        
+        <!-- Courses Section -->
+        <h2 class="section-title" id="courses">🎓 精品课程</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-icon">📘</div>
+                <h3>《道德经》精读</h3>
+                <div class="course-meta">
+                    <span>📅 12周</span>
+                    <span>🎯 入门</span>
+                    <span>🎵 含音频</span>
+                </div>
+                <p>四阶段递进：原文精读 → 注疏研讨 → 思想阐释 → 现代应用。深入理解道家智慧。</p>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-icon">📗</div>
+                <h3>《论语》精读</h3>
+                <div class="course-meta">
+                    <span>📅 16周</span>
+                    <span>🎯 入门</span>
+                    <span>🎵 含音频</span>
+                </div>
+                <p>仁义礼智信的完整学习。从原文到现代应用，全面掌握儒家核心思想。</p>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-icon">☯️</div>
+                <h3>《周易》入门</h3>
+                <div class="course-meta">
+                    <span>📅 20周</span>
+                    <span>🎯 进阶</span>
+                    <span>🛠️ 含工具</span>
+                </div>
+                <p>八卦六十四卦系统学习。阴阳哲学与变易思维，决策智慧的源泉。</p>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-icon">🦋</div>
+                <h3>《庄子》精读</h3>
+                <div class="course-meta">
+                    <span>📅 16周</span>
+                    <span>🎯 进阶</span>
+                    <span>🎵 含音频</span>
+                </div>
+                <p>逍遥游、齐物论核心篇章。精神自由与审美人生，庄子思想的现代启示。</p>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-icon">🪷</div>
+                <h3>《心经》精读</h3>
+                <div class="course-meta">
+                    <span>📅 8周</span>
+                    <span>🎯 入门</span>
+                    <span>🧘 含冥想</span>
+                </div>
+                <p>260字般若智慧。逐句解析空性思想，含禅修实践指导。</p>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-icon">🧘</div>
+                <h3>《六祖坛经》精读</h3>
+                <div class="course-meta">
+                    <span>📅 12周</span>
+                    <span>🎯 进阶</span>
+                    <span>🎵 含音频</span>
+                </div>
+                <p>顿悟成佛的智慧。从行由到咐嘱，完整学习禅宗精髓。</p>
             </div>
         </div>
         
         <!-- Features -->
+        <h2 class="section-title" id="resources">✨ 学习资源</h2>
         <div class="features">
             <div class="feature-card">
                 <div class="icon">📖</div>
@@ -292,22 +471,22 @@
                 <p>五阶递进：原文→注疏→思想→对比→应用</p>
             </div>
             <div class="feature-card">
+                <div class="icon">🎵</div>
+                <h3>音频朗读</h3>
+                <p>专家朗读 + 导读音频 + 每日一句</p>
+            </div>
+            <div class="feature-card">
                 <div class="icon">💡</div>
                 <h3>二阶心智</h3>
                 <p>不只是知识传授，更是思维训练与意义生成</p>
             </div>
-            <div class="feature-card">
-                <div class="icon">🌍</div>
-                <h3>中外对比</h3>
-                <p>与西方哲学深度对话，发现传统独特智慧</p>
-            </div>
         </div>
     </div>
     
-    <footer>
+    <footer id="about">
         <p><strong>九经书院</strong> - 传承经典，开启智慧</p>
         <p style="margin-top: 10px;">基于胡勇教授二阶心智理论 | 喵妹 🐱 技术实现</p>
-        <p style="margin-top: 10px; font-size: 0.9em;">v0.2.0 | 2026-02-12</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">v0.3.0 | 2026-02-13</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,12 @@
+{
+  "name": "jiujing-academy",
+  "version": "0.2.0",
+  "description": "九经书院 - 传承经典，开启智慧",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": ["philosophy", "confucianism", "taoism", "buddhism", "education"],
+  "author": "胡勇教授",
+  "license": "MIT"
+}
