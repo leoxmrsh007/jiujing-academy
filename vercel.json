@@ -8,34 +8,38 @@
   ],
   "routes": [
     {
-      "src": "/classics/(.*)",
+      "src": "/",
+      "dest": "/frontend/index.html"
+    },
+    {
+      "src": "/index.html",
+      "dest": "/frontend/index.html"
+    },
+    {
+      "src": "/classics/(.+)",
       "dest": "/frontend/classics/$1"
     },
     {
-      "src": "/courses/(.*)",
+      "src": "/courses/(.+)",
       "dest": "/frontend/courses/$1"
     },
     {
-      "src": "/research/(.*)",
+      "src": "/research/(.+)",
       "dest": "/frontend/research/$1"
     },
     {
-      "src": "/profile/(.*)",
-      "dest": "/frontend/profile/$1"
+      "src": "/((?:classics|courses|research)/.*\\.(?:html|css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
+      "dest": "/frontend/$1"
     },
     {
       "src": "/(.+\\.(html|css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
       "dest": "/frontend/$1"
     },
     {
-      "src": "/",
-      "dest": "/frontend/index.html"
-    },
-    {
       "src": "/(.*)",
       "dest": "/frontend/$1"
     }
   ],
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false
 }
