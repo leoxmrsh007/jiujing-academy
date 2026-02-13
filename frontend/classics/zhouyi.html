@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周易 - 九经书院</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Serif SC', 'SimSun', serif;
+            background: linear-gradient(135deg, #f5f0e8 0%, #e8e0d5 100%);
+            color: #3d3d3d;
+            line-height: 1.8;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
+            color: #f5f0e8;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 30px;
+        }
+        header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        header p { font-size: 1.1em; opacity: 0.9; }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b4513;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .back-link:hover { background: #f0e6d3; }
+        
+        .intro {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .intro h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .gua-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gua-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .gua-card .symbol {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .gua-card h4 {
+            color: #8b4513;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #3d3d3d;
+            color: #f5f0e8;
+            border-radius: 30px 30px 0 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>☯️ 周易</h1>
+        <p>伏羲画卦 · 文王演易 · 孔子系辞 · 64卦智慧</p>
+    </header>
+    
+    <div class="container">
+        <a href="../index.html" class="back-link">← 返回首页</a>
+        
+        <div class="intro">
+            <h2>关于周易</h2>
+            <p>《周易》是中国最古老的经典之一，被誉为"群经之首，大道之源"。相传伏羲画八卦，周文王演为64卦，孔子作《易传》。</p>
+            <p>周易通过阴阳变化揭示宇宙人生的规律，是中华文明智慧的结晶。</p>
+            
+            <h3 style="margin-top: 20px; color: #8b4513;">八卦基础</h3>
+            <div class="gua-grid">
+                <div class="gua-card">
+                    <div class="symbol">☰</div>
+                    <h4>乾</h4>
+                    <p>天行健，君子以自强不息</p>
+                </div>
+                <div class="gua-card">
+                    <div class="symbol">☷</div>
+                    <h4>坤</h4>
+                    <p>地势坤，君子以厚德载物</p>
+                </div>
+                <div class="gua-card">
+                    <div class="symbol">☳</div>
+                    <h4>震</h4>
+                    <p>雷，动也</p>
+                </div>
+                <div class="gua-card">
+                    <div class="symbol">☵</div>
+                    <h4>坎</h4>
+                    <p>水，险也</p>
+                </div>
+                <div class="gua-card">
+                    <div class="symbol">☶</div>
+                    <h4>艮</h4>
+                    <p>山，止也</p>
+                </div>
+                <div class="gua-card">
+                    <div class="symbol">☴</div>
+                    <h4>巽</h4>
+                    <p>风，入也</p>
+                </div>
+                <div class="gua-card">
+                    <div class="symbol">☲</div>
+                    <h4>离</h4>
+                    <p>火，丽也</p>
+                </div>
+                <div class="gua-card">
+                    <div class="symbol">☱</div>
+                    <h4>兑</h4>
+                    <p>泽，说也</p>
+                </div>
+            </div>
+        </div>
+        
+        <p style="text-align: center; color: #888; margin: 30px 0;">... 64卦详解持续更新中 ...</p>
+    </div>
+    
+    <footer>
+        <p>九经书院 - 传承经典，开启智慧</p>
+    </footer>
+</body>
+</html>
